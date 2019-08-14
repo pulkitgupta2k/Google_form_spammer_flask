@@ -1,0 +1,22 @@
+{{ link }}
+{{ num }}
+{{ title }}
+{{ question_list }}
+<br>
+{% for i in range(question_length) %}
+    {% for j in question_list[i].split('\n') %}
+        {{ j }}
+        <br>
+    {% endfor %}
+    <form action="{{ url_for('send') }}" method="POST">
+        <div class="form-group">
+            <label for="user_ans">Your Answer: </label>
+            <input type="text" class="form-control" name="user_ans" placeholder="Enter your answer">
+        </div>
+    <br>
+    <br>
+{% endfor %}
+
+<div class="form-group">
+    <button type="submit" name="Submit">Submit</button>
+</div>
