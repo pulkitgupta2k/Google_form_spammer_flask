@@ -107,6 +107,7 @@ def send():
             rand.clear()
             question_list.clear()
 
+
         def faker_input(type):
             if(type=="name"):
                 return fake.name()
@@ -121,7 +122,7 @@ def send():
             else:
                 return type
         post(link_short,num)
-        return render_template("index.html",**locals())
+        return redirect('/')
     else:
         return render_template("index.html",**locals())
 
