@@ -112,7 +112,7 @@ def send():
             if(type=="name"):
                 return fake.name()
             if(type=="number"):
-                return fake.msisdn()
+                return ('9'+ fake.msisdn()[4:])
             if(type=="word"):
                 return fake.word()
             if(type=="sentence"):
@@ -128,4 +128,4 @@ def send():
 
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port='80')
+    app.run(host='127.0.0.1', port='5000')
