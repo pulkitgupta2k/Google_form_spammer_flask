@@ -102,6 +102,10 @@ def send():
                 #res = conn.getresponse()
                 print('.')
                 #data = res.read()
+            final_ans.clear()
+            form_entry.clear()
+            rand.clear()
+            question_list.clear()
 
         def faker_input(type):
             if(type=="name"):
