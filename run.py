@@ -46,10 +46,11 @@ def index():
                         entry_token=str(attribute.attrs['name'])
                         if(entry_token[-1].isdigit()):
                             token=str(attribute.attrs['name'])
+                            form_entry.append(token)
                             break
                     except:
                         print("")
-                form_entry.append(token)
+                
                 # if user_ans.startswith('!random'):
                 #     rand.append(result.split('\n'))
                 #final_ans[token]=user_ans
@@ -82,7 +83,7 @@ def send():
                 payload="------WebKitFormBoundary7MA4YWxkTrZu0gW"
                 for i in range(len(form_entry)):
                     #print("ans= "+str(faker_input((form_entry_data[i])[6:])))
-                    if(form_entry_data[i].startswith('!num')):
+                    if(form_entry_data[i].startswith('!cgpa')):
                         payload+="\r\nContent-Disposition: form-data; name=\""+str(form_entry[i])+"\"\r\n\r\n"+str(random.randrange(8,10,1))+"\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW"
                     elif(form_entry_data[i].startswith('!fake.')):
                         payload+="\r\nContent-Disposition: form-data; name=\""+str(form_entry[i])+"\"\r\n\r\n"+str(faker_input((form_entry_data[i])[6:]))+"\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW"
