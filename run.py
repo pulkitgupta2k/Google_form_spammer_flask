@@ -21,6 +21,8 @@ def index():
     if request.method=="POST":
         link = request.form['link']
         num = request.form['num']
+        if num>10000:
+            num=10000
         linkarr = link.split('/')
         link_short = linkarr[6]
         page=urllib.request.urlopen(link)
