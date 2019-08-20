@@ -88,6 +88,8 @@ def send():
                     #print("ans= "+str(faker_input((form_entry_data[i])[6:])))
                     if(form_entry_data[i].startswith('!cgpa.')):
                         payload+="\r\nContent-Disposition: form-data; name=\""+str(form_entry[i])+"\"\r\n\r\n"+str(random.randrange(int((form_entry_data[i])[6:])*10,100,1)/10)+"\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW"
+                    elif(form_entry_data[i].startswith('!roll.')):
+                        payload+="\r\nContent-Disposition: form-data; name=\""+str(form_entry[i])+"\"\r\n\r\n"+form_entry_data[i][6:]+str(random.randrange(10000,99999,1))+"\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW"
                     elif(form_entry_data[i].startswith('!fake.')):
                         payload+="\r\nContent-Disposition: form-data; name=\""+str(form_entry[i])+"\"\r\n\r\n"+str(faker_input((form_entry_data[i])[6:]))+"\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW"
                     elif(form_entry_data[i]=='!random'):
