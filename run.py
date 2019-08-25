@@ -105,7 +105,7 @@ def send():
                         payload+="\r\nContent-Disposition: form-data; name=\""+str(form_entry[i])+"\"\r\n\r\n"+str(form_entry_data[i])+"\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW"
                 payload+="--"
                 conn.request("POST", "/forms/u/0/d/e/"+link_short+"/formResponse", payload, headers)
-                sleep(0.05)
+                #sleep(1)
                 #res = conn.getresponse()
                 print('.')
                 #data = res.read()
