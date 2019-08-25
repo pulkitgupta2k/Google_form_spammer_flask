@@ -1,4 +1,4 @@
-from start import final_ans, link, input_entries,rand
+from start import final_ans, link, input_entries,rand, linkarr
 import http.client
 from faker import Faker
 import random
@@ -6,7 +6,7 @@ import random
 fake=Faker()
 fake_IN=Faker('hi_IN')
 
-link1= "1keBiImwMyXaXFtK93AQ6VKWo5U2NegDF3I_ZUYLKVNg"
+link1= linkarr[6]
 
 def post(link,num,faker):
 	form_entry=['']
