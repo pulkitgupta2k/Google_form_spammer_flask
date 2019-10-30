@@ -43,7 +43,8 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+  font-family: Poppins-Regular, sans-serif;
+  background-color: #191919;
 }
 
 /*---------------------------------------------*/
@@ -208,7 +209,7 @@ iframe {
   width: 100%;
   font-family: Montserrat-Black;
   font-size: 39px;
-  color: #333333;
+  color: #00b300;
   line-height: 1.2;
   text-align: center;
   padding-bottom: 59px;
