@@ -1,6 +1,6 @@
 # Google_form_spammer_flask
 
-
+***[Despreciated] Visit https://pulkitgupta2k.in/gform for a working version***
 
 **Requirements:**
 
@@ -14,3 +14,4 @@ Python
 
 
 ***Disclaimer: For education purpose only. I am not responsible for the harm caused by this script.***
+
