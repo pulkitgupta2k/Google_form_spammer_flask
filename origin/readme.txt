@@ -1,4 +1,0 @@
-Cli
-
-python postsend.py
-

@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+
+
+
+{% block body %}
+<div class="mid-content">
+    <section class="content">
+        <article class="post-4 page type-page status-publish hentry">
+            <div>
+                <hr class="wheat">
+                <h2 class="wheat">Instructions: </h2><br>
+                <span class="wheat">1.</span> Enter the required answer in the textbox<br>
+                <span class="wheat">2.</span> To input random data in each try include "<i class="wheat">!fake.entity</i>" (without quotes) where entity refers to <b class="wheat">name, email, number, sentence, word</b>. eg: to input random names type <b class="wheat">!fake.name</b> in the textbox.<br>
+                <span class="wheat">3.</span> For questions with multiple options, to generate random option in each try, select "<b class="wheat">random</b>"<br>
+                <span class="wheat">4.</span> For random cgpa with a range, use "<i class="wheat">!cgpa.num</i>" (without quotes), where num refers to the start of cgpa. eg: to put random cgpa from 7.0 to 10.0 use <b class="wheat">!cgpa.7</b><br>
+                <span class="wheat">5.</span> For fake roll number, use "<i class="wheat">!roll.number</i>, where number refers to first 4 digits of the required roll number. For eg: <i class="wheat">!roll.1018</i> will generate roll numbers from 101800000 to 101899999.<br>
+                <span class="wheat">6.</span> Submit and enjoy ;)<br>
+                <hr class="wheat">
+            </div>
+            <h2 class="wheat">
+                {{fields['title']}}
+            </h2>
+            <h3 style="font-style: italic">
+                {{fields['desc']}}
+            </h3>
+
+            <form method="POST" action="{{ url_for('gform_send') }}">
+                {% for item in fields["items"] %}
+                    <div class="heading-h5 p-1">
+                        <span>{{ item['question'] }} <span class="wheat">{{item['req']}}</span></span>
+                            {% if item['type'] == 0 %}
+                                <input name="{{ item['id'] }}" {{item['req']}}>
+                            {% elif item['type'] == 1 %}
+                                <input name="{{ item['id'] }}" {{item['req']}}>
+                            {% elif item['type'] == 2 %}
+                                <br>
+                                {% for option in item['options'] %}
+                                    {% if option['type'] == 0 %}
+                                        <input type="radio" class="radio" name="{{ item['id'] }}" value="{{ option['option'] }}" {{ item['req'] }}>
+                                        <label>{{ option['option'] }}</label><br>
+                                    {% else %}
+                                        <input type="radio" class="radio" name="{{ item['id'] }}" value="__other_option__">
+                                        <label>Others: </label>
+                                        <input placeholder= "Others" class="radio" name="{{ item['id'] }}.other_option_response">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​<br>
+                                        {% endif %}
+                                {% endfor %}
+                                    <input type="radio" class="radio" name="{{ item['id'] }}" value="!random"><label class="wheat">Random</label><br>
+                            {% elif item['type'] == 3 %}
+                                <select name="{{ item['id'] }}" {{ item['req'] }}>
+                                    {% for option in item['options'] %}
+                                        <option value="{{ option['option'] }}">{{ option['option'] }}</option>
+                                    {% endfor %}
+                                    <option value="!random">Random</option>
+                                </select>
+                            {% elif item['type'] == 4 %}
+                                <br>
+                                {% for option in item['options'] %}
+                                    {% if option['type'] == 0 %}
+                                        <input type="checkbox" class="radio" name="{{ item['id'] }}" value="{{ option['option'] }}" {{ item['req'] }}>
+                                        <label>{{ option['option'] }}</label><br>
+                                    {% else %}
+                                        <input type="checkbox" class="radio" name="{{ item['id'] }}" value="__other_option__">
+                                        <label>Others: </label>
+                                        <input placeholder= "Others" class="radio" name="{{ item['id'] }}.other_option_response">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​<br>
+                                        {% endif %}
+                                {% endfor %}
+                                    <input type="checkbox" class="radio" name="{{ item['id'] }}" value="!random">
+                                    <label class= "wheat">Random</label><br>
+                            {% endif %}
+                        
+                    </div>
+                {% endfor %}
+                <div class="heading-h5 p-1">
+                    <span class="wheat">Enter Number of Entries</span>
+                    <input type="text" name="num" placeholder="Number" required>
+                </div>
+
+                <input type="hidden" name="fields" value="{{fields}}"> 
+
+                <div class="heading-h5">
+                    <center>
+                        
+                        <button type="submit" name="submit" class="button">
+                            <span>
+                                Submit
+                            </span>
+                        </button>
+                    </center>
+                </div>
+            </form>
+        </article>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+.para-less-space {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+}
+
+.heading-h5 {
+    display: block;
+    margin-block-end: 0.5em;
+}
+
+.wheat {
+    color: wheat !important;
+}
+
+.wheat a:hover {
+    background-color: white !important;
+    color: black !important;
+    text-decoration: none;
+}
+
+a.button {
+    padding: 0.25em;
+    border-style: outset;
+}
+
+button {
+    color: #090A0F;
+    font-family: c64, courier, monospaced;
+    background-color: #A6A1FF;
+    padding: 0.25em;
+    border-style: outset;
+    cursor: pointer;
+}
+
+@media (min-device-width : 1065px){
+    input {
+        width: 50% !important;
+        float: right;
+    }
+}
+
+input{
+    width: 80%;
+    display: block;
+    font-family: c64, courier, monospaced;
+}
+
+@media (min-device-width : 1065px){
+    select {
+        width: 50% !important;
+        float: right;
+    }
+}
+
+select{
+    width: 80%;
+    display: block;
+    font-family: c64, courier, monospaced;
+}
+
+.mid-content{
+    width: 80% !important;
+    float: none;
+    margin: 0 auto;
+}
+
+input.radio{
+    display: unset;
+    float: unset;
+    width: unset !important;
+}
+
+
+.p-1{
+    padding-bottom: 1rem;
+}
+
+.spotify{
+    color: #1DB954!important;
+}

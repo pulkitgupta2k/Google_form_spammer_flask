@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+
+
+
+{% block body %}
+<div class="mid-content">
+    <section class="content">
+        <article class="post-4 page type-page status-publish hentry">
+            <h2 class="wheat">
+                Google Form Submitter
+            </h2>
+            <form method="POST" action="{{ url_for('gform') }}">
+                <div class="heading-h5">
+                    <span class="">Enter Link</span>
+                    <input class="" type="text" name="link" placeholder="Link">
+                </div>
+
+                <div class="heading-h5">
+                    <center>
+                        <button type="submit" name="submit" class="button">
+                            <span>
+                                Submit
+                            </span>
+                        </button>
+                    </center>
+                </div>
+            </form>
+        </article>
+    </section>
+</div>
+{% endblock %}

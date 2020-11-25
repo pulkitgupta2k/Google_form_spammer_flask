@@ -1,0 +1,444 @@
+/*
+Theme Name: Commodore
+Text Domain: commodore
+Description: Simple and lightweight responsive theme in the style of the good old Commodore 64. The search box has been modified - just type and press Return to search - classic blinking cursor included!
+Author: United Networks
+Version: 1.70
+Tags: two-columns, one-column, right-sidebar, custom-menu
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Theme URI: http://unitednetworksonline.com/wordpress-themes/
+Author URI: http://unitednetworksonline.com
+*/
+
+@font-face {
+ font-family: c64;
+ src: local('c64'), url('C64.ttf') format('truetype');
+}
+
+html {
+ height: 100%;
+}
+
+body {
+ margin: auto;
+ height: 100%;
+ width: 100%;
+ padding: 0;
+ font-family: c64, courier, monospaced;
+ color: #A6A1FF;
+ background-color: #A6A1FF;
+ position: relative;
+ font-size: 14px;
+ line-height: 1.7em;
+ background-size: 100%;
+ min-height: 100%;
+}
+
+#container {
+ background: #070707;
+ margin: 50px auto;
+ max-width: 1280px;
+}
+
+.content {
+ padding: 5px;
+ min-height: 500px;
+}
+
+.content a {
+ color: #A6A1FF;
+}
+
+.content a:hover {
+ background-color: white;
+ color: black;
+ text-decoration: none;
+}
+
+a:hover {
+ background-color: white;
+ color: black;
+ text-decoration: none;
+}
+
+mark {
+ background-color: #fff;
+ font-weight: bold;
+ color: #000;
+}
+
+#wrapper {
+ width: 1280px;
+ margin: 0 auto;
+}
+
+.header-home {
+ padding: 10px 0 20px 0;
+ text-align: center;
+}
+
+.header-home h1 {
+ text-align: center;
+ font-size: 30px;
+ font-weight: bold;
+ letter-spacing: -0.06em;
+ line-height: 30px;
+ margin: 0 auto 5px auto;
+}
+
+.header-home h1 a {
+ color: #A6A1FF;
+ text-decoration: none;
+}
+
+.header-home h1 a:hover {
+ background-color: white;
+ color: black;
+ text-decoration: none;
+}
+
+.header-home h2 {
+ font-size: 14px;
+ font-weight: bold;
+ letter-spacing: 0em;
+ margin: 0 auto;
+}
+
+body.has_sidebar .content {
+ width: 960px;
+ margin: 0 auto;
+ position: relative;
+ float: left;
+}
+
+#cursor {
+ background: #A6A1FF;
+ width: 19px;
+ height: 19px;
+ font-size: 1px;
+ position: relative;
+ display: inline-block;
+ vertical-align: top;
+}
+
+section {
+ display: block;
+}
+
+blockquote {
+ padding: 0 40px;
+ position: relative;
+ border: 1px dashed #ccc;
+ margin: 0 0 20px 0;
+}
+
+blockquote:before {
+ content: '\201C';
+ font-size: 55px;
+ color: #ccc;
+ position: absolute;
+ top: 0px;
+ left: 10px;
+}
+
+blockquote:after {
+ content: '\201D';
+ font-size: 55px;
+ color: #ccc;
+ position: absolute;
+ bottom: -30px;
+ right: 10px;
+}
+
+table {
+ width: 100%;
+ border: 1px solid #ccc;
+ font-size: 12px;
+ margin-bottom: 20px;
+}
+
+th {
+ background-color: #666;
+ color: #fff;
+ text-align: left;
+}
+
+th, td {
+ padding: 5px;
+}
+
+dl {
+ font-size: 12px;
+}
+
+dt {
+ font-weight: bold;
+}
+
+dd {
+ margin-bottom: 5px;
+ margin-left: 10px;
+}
+
+address {
+ font-size: 12px;
+}
+
+acronym {
+ border-bottom: 1px dashed #ccc;
+}
+
+s, strike, del {
+ text-decoration: line-through;
+}
+
+.size-full {
+ max-width: 550px;
+ height: auto;
+ overflow: hidden;
+}
+
+footer {
+ text-align: center;
+ color: #A6A1FF;
+ padding: 10px 0;
+ display: block;
+ clear: both;
+}
+
+footer a {
+ color: inherit;
+}
+
+nav {
+ display: block;
+ text-align: left;
+ font-size: 12px;
+ width: 250px;
+ float: right;
+ line-height: 1.6em;
+}
+
+nav ul {
+ list-style: none;
+ line-height: 1.6em;
+ padding: 0;
+ margin: 0 0 0 0;
+ color: #A6A1FF;
+}
+
+nav a {
+ color: #A6A1FF;
+}
+
+#respond {
+ clear: both;
+ padding: 15px 15px 15px 15px;
+}
+
+#respond h3 {
+ margin: 0 0 15px 0;
+ padding: 0 0 0 0;
+}
+
+#commentform p {
+ clear: both;
+}
+
+#commentform p input, #commentform p textarea {
+ width: 400px;
+ float: right;
+}
+
+p.form-allowed-tags {
+ clear: both;
+ padding-top: 20px;
+ color: #999;
+}
+
+p.form-submit input {
+ width: auto !important;
+}
+
+.prevnext {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ text-align: center;
+ font-size: 12px;
+ width: 720px;
+}
+
+.prevnext li {
+ display: inline;
+ padding: 10px;
+}
+
+.wp-caption {
+ margin-bottom: 20px;
+ text-align: center;
+ overflow: hidden;
+ height: auto;
+}
+
+.wp-caption img {
+ margin: 5px;
+ border: none;
+ margin: 0 0 2px 0;
+}
+
+.wp-caption p.wp-caption-text {
+ color: #888;
+ font-size: 12px;
+ margin: 5px 0 5px 0;
+}
+
+hr.clearfix {
+ clear: both;
+ visibility: hidden;
+}
+
+.widget_text div {
+ color: #999;
+ padding: 15px;
+}
+
+.pie_search_form #s {
+ left: -1000px;
+ position: absolute;
+ border: 0 none;
+ background: transparent none;
+ color: #A6A1FF;
+ font-family: c64,courier,monospaced;
+ font-size: 14px;
+ line-height: 1.7em;
+}
+
+#terminal {
+ margin: 1px 1px 15px;
+ cursor: text;
+ height: auto;
+ overflow: hidden;
+ max-width: 900px;
+}
+
+#writer {
+ color: #A6A1FF;
+ display: inline-block;
+ font-family: c64,courier,monospaced;
+ font-size: 14px;
+ height: 22px;
+ line-height: 1.7em;
+ overflow: hidden;
+ max-width: 870px;
+ vertical-align: top;
+}
+
+#getter {
+ margin: 1px;
+}
+
+.menu li {
+ display: inline;
+}
+
+.menu a {
+ color: #A6A1FF;
+}
+
+.menu a:hover {
+ background-color: white;
+ color: black;
+ text-decoration: none;
+}
+
+.menu li + li {
+ background: url('images/sep.png') no-repeat top left;
+ padding-left: 15px;
+}
+
+.index-date {
+  padding: 0 0 0 25px;
+  margin: -15px;
+}
+
+.post-date {
+  padding: 0 0 0 25px;
+  margin: -15px;
+}
+
+code {
+ font-family: c64,courier,monospaced;
+ font-size: 10px;
+}
+
+/* Standard Smartphones */
+@media only screen and (max-width: 767px) {
+#container { margin: 20px auto; }
+#wrapper { width: 100%; }
+.header-home { padding: 5px; }
+body.has_sidebar .content { width: 100%; }
+nav { float: none; padding: 5px; width: 100%; }
+#commentform p input, #commentform p textarea { width: 100%; }
+.prevnext { padding-bottom: 50px; }
+ }
+ 
+/* iPhone6 */ 
+@media only screen and (max-device-width : 667px) {
+#container { margin: 20px auto; padding: 2%; }
+#wrapper { width: 100%; }
+.header-home { padding: 5px; }
+body.has_sidebar .content { width: 100%; }
+nav { float: none; padding: 5px; width: 100%; }
+#commentform p input, #commentform p textarea { width: 100%; }
+.prevnext { padding-bottom: 50px; }
+ }
+ 
+ @media only screen and (max-device-width : 736px) {
+#container { margin: 20px auto; padding: 2%; }
+#wrapper { width: 100%; }
+.header-home { padding: 5px; }
+body.has_sidebar .content { width: 100%; }
+nav { float: none; padding: 5px; width: 100%; }
+#commentform p input, #commentform p textarea { width: 100%; }
+.prevnext { padding-bottom: 50px; }
+}
+
+@media only screen and (min-width:737px) and (max-width:1065px) {
+#wrapper,.content,nav { box-sizing:border-box; }
+#wrapper { width:100%; }
+.content { width:75% !important;padding:10px 15px; }
+nav { width:25% !important;float:left !important; }
+}
+
+img.wp-image-4 { max-width:100%;height:auto;box-sizing:border-box;padding:10px 20px 10px 15px; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
